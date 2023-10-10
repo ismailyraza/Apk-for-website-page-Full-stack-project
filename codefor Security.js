@@ -63,3 +63,20 @@ app.use((req, res, next) => {
   }
   next();
 });
+describe('User Registration API', () => {
+  it('should register a new user', async () => {
+    // Test code
+  });
+
+  it('should reject duplicate email registration', async () => {
+    // Test code
+  });
+});
+const myModule = require('./myModule');
+
+jest.mock('./myModule');
+
+test('should call a function', () => {
+  myModule.myFunction.mockImplementation(() => 'mocked value');
+  expect(myModule.myFunction()).toBe('mocked value');
+});
